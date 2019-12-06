@@ -3,7 +3,9 @@ import React from 'react'
 export default class LoadingState extends React.Component {
   render() {
     return (
-      <p>Loading...</p>
+      <div className="progress">
+        <div className="indeterminate"></div>
+      </div>
     )
   }
 }

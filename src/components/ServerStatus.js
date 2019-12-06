@@ -98,7 +98,6 @@ export default class ServerStatus extends React.Component {
       <div>
         <h3>scheduled maintenance</h3>
         <ul>
-
           <MaintenanceItem maintenance={this.state.maintenance} />
         </ul>
         <h3>imp servers</h3>
