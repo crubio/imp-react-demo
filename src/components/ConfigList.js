@@ -1,6 +1,6 @@
 import React from 'react'
-import $http from '../lib/api'
 import LoadingState from './LoadingState'
+import services from '../services/request'
 
 class ConfigRow extends React.Component {
   render() {
@@ -25,7 +25,7 @@ class ConfigRow extends React.Component {
  */
 export default class ConfigList extends React.Component {
   async getConfigs() {
-    return await $http.get('ui/config')
+    return await services.getConfigs()
   }
 
   constructor(props) {

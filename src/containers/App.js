@@ -5,7 +5,6 @@ import MainContainer from './MainContainer'
 
 export default class App extends React.Component {
   componentDidMount() {
-    console.log('App mounted')
     M.AutoInit()
   }
   render() {

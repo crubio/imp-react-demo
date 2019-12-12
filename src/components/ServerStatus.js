@@ -1,6 +1,6 @@
 import React from 'react'
-import $http from '../lib/api'
 import LoadingState from './LoadingState'
+import services from '../services/request'
 
 class ServerStatusRow extends React.Component {
 
@@ -43,11 +43,11 @@ class MaintenanceItem extends React.Component {
 
 export default class ServerStatus extends React.Component {
   async getServerStatus() {
-    return await $http.get('https://electricimp.statuspage.io/api/v2/components.json')
+    return await services.getServerStatus()
   }
 
   async getMaintenanceStatus() {
-    return await $http.get('https://electricimp.statuspage.io/api/v2/scheduled-maintenances.json')
+    return await services.getMaintenanceStatus()
   }
 
   constructor(props) {
